@@ -7,19 +7,19 @@
 		<link rel="stylesheet" href="css/site-style.css">
     </head>
     <body>
-		<div id="favoriteGifs" class="form-container col-md-9">
+		<div id="gifs" class="form-container col-md-9">
 			<form id="addGif" action="#">
 				<div class="form-group">
-					<label for="gif">GIF: </label>
-					<input id="gif" type="file" class="form-control" />
+					<label for="src">GIF: </label>
+					<input id="src" type="file" class="form-control" />
 				</div>
 				<div class="form-group">
 					<label for="title">Title: </label>
 					<input id="title" type="text" class="form-control"/>
 				</div>
 				<div class="form-group">
-					<label for="keywords">Keywords: </label>
-					<input id="keywords" type="text" class="form-control" />
+					<label for="category">Category: </label>
+					<input id="category" type="text" class="form-control" />
 					
 				</div>
 				<div class="form-group">
@@ -28,15 +28,23 @@
 			</form>
 		</div>		
 		<script id="gifTemplate" type="text/template">
-			<img src="<%= gif %>"/>
-			<ul>
+			<div class="gif-wrapper pull-left highlight">
+				<img src="<%= src %>" class="img-rounded center-block"/>
+			</div>
+			<ul class="list-unstyled">
 				<li><%= title %></li>
-				<li><%= keywords %></li>
+				<li><%= category %></li>
+				<li><%= uploadDate %></li>
 			</ul>
-			<button class="delete">Delete</button>
+			<button class="btn btn-danger">Delete</button>
 		</script>
 		<script src="js/lib/jquery-1.10.2.min.js"></script>
 		<script src="js/lib/underscore-min.js"></script>
 		<script src="js/lib/backbone-min.js"></script>
+		<script src="js/models/gif.js"></script>
+        <script src="js/collections/library.js"></script>
+        <script src="js/views/gif.js"></script>
+        <script src="js/views/library.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

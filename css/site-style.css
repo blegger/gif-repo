@@ -8,3 +8,14 @@
 	border-style: solid;
 	margin:10px;
 }
+.gif-outer-wrapper {
+	margin-bottom:40px;
+}
+.gif-wrapper {
+	padding:20px;
+	width:800px; 
+	background-color:#f7f7f9;
+	border:1px solid #e1e1e8; 
+	border-radius:4px;
+	margin-right:20px;
+}
