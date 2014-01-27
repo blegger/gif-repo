@@ -1,0 +1,10 @@
+.form-container {
+	padding: 15px;
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #ddd;
+	border-radius: 4px;
+	box-shadow: none;
+	border-style: solid;
+	margin:10px;
+}

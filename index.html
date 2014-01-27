@@ -3,9 +3,39 @@
     <head>
         <meta charset="UTF-8"/>
         <title>GIF Repository</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/site-style.css">
     </head>
     <body>
-		<script src="js/lib/jquery.min.js"></script>
+		<div id="favoriteGifs" class="form-container col-md-9">
+			<form id="addGif" action="#">
+				<div class="form-group">
+					<label for="gif">GIF: </label>
+					<input id="gif" type="file" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="title">Title: </label>
+					<input id="title" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label for="keywords">Keywords: </label>
+					<input id="keywords" type="text" class="form-control" />
+					
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Add" id="add" class="btn btn-primary btn-block"></input>
+				</div>
+			</form>
+		</div>		
+		<script id="gifTemplate" type="text/template">
+			<img src="<%= gif %>"/>
+			<ul>
+				<li><%= title %></li>
+				<li><%= keywords %></li>
+			</ul>
+			<button class="delete">Delete</button>
+		</script>
+		<script src="js/lib/jquery-1.10.2.min.js"></script>
 		<script src="js/lib/underscore-min.js"></script>
 		<script src="js/lib/backbone-min.js"></script>
     </body>
